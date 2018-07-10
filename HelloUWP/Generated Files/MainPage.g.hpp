@@ -32,25 +32,35 @@ void ::HelloUWP::MainPage::Connect(int __connectionId, ::Platform::Object^ __tar
     {
     case 2:
         {
-            this->contentPanel = safe_cast<::Windows::UI::Xaml::Controls::StackPanel^>(__target);
+            this->wideState = safe_cast<::Windows::UI::Xaml::VisualState^>(__target);
         }
         break;
     case 3:
         {
-            this->inputPanel = safe_cast<::Windows::UI::Xaml::Controls::StackPanel^>(__target);
+            this->narrowState = safe_cast<::Windows::UI::Xaml::VisualState^>(__target);
         }
         break;
     case 4:
         {
-            this->greetingOutput = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(__target);
+            this->contentPanel = safe_cast<::Windows::UI::Xaml::Controls::StackPanel^>(__target);
         }
         break;
     case 5:
         {
-            this->nameInput = safe_cast<::Windows::UI::Xaml::Controls::TextBox^>(__target);
+            this->inputPanel = safe_cast<::Windows::UI::Xaml::Controls::StackPanel^>(__target);
         }
         break;
     case 6:
+        {
+            this->greetingOutput = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(__target);
+        }
+        break;
+    case 7:
+        {
+            this->nameInput = safe_cast<::Windows::UI::Xaml::Controls::TextBox^>(__target);
+        }
+        break;
+    case 8:
         {
             this->inputButton = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
             (safe_cast<::Windows::UI::Xaml::Controls::Button^>(this->inputButton))->Click += ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::HelloUWP::MainPage::*)

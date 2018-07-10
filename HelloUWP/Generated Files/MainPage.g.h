@@ -10,6 +10,13 @@
 namespace Windows {
     namespace UI {
         namespace Xaml {
+            ref class VisualState;
+        }
+    }
+}
+namespace Windows {
+    namespace UI {
+        namespace Xaml {
             namespace Controls {
                 ref class StackPanel;
                 ref class TextBlock;
@@ -40,6 +47,8 @@ namespace HelloUWP
         bool _contentLoaded;
     
     
+        private: ::Windows::UI::Xaml::VisualState^ wideState;
+        private: ::Windows::UI::Xaml::VisualState^ narrowState;
         private: ::Windows::UI::Xaml::Controls::StackPanel^ contentPanel;
         private: ::Windows::UI::Xaml::Controls::StackPanel^ inputPanel;
         private: ::Windows::UI::Xaml::Controls::TextBlock^ greetingOutput;
